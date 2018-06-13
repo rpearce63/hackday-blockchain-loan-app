@@ -12,6 +12,7 @@
 		4DD9A65220D14CB700F62AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A65120D14CB700F62AD5 /* Assets.xcassets */; };
 		4DD9A65520D14CB700F62AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A65320D14CB700F62AD5 /* LaunchScreen.storyboard */; };
 		4DD9A65D20D1500700F62AD5 /* LoapAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A65C20D1500700F62AD5 /* LoapAppVC.swift */; };
+		4DD9A66220D1720900F62AD5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A66120D1720900F62AD5 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4DD9A65420D14CB700F62AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DD9A65620D14CB700F62AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DD9A65C20D1500700F62AD5 /* LoapAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoapAppVC.swift; sourceTree = "<group>"; };
+		4DD9A66120D1720900F62AD5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4DD9A65120D14CB700F62AD5 /* Assets.xcassets */,
 				4DD9A65320D14CB700F62AD5 /* LaunchScreen.storyboard */,
 				4DD9A65620D14CB700F62AD5 /* Info.plist */,
+				4DD9A66120D1720900F62AD5 /* README.md */,
 			);
 			path = "hackday-2018-blockchain-loan-application";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				4DD9A65520D14CB700F62AD5 /* LaunchScreen.storyboard in Resources */,
 				4DD9A65220D14CB700F62AD5 /* Assets.xcassets in Resources */,
+				4DD9A66220D1720900F62AD5 /* README.md in Resources */,
 				4DD9A65020D14CB600F62AD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
