@@ -11,8 +11,13 @@
 		4DD9A65020D14CB600F62AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A64E20D14CB600F62AD5 /* Main.storyboard */; };
 		4DD9A65220D14CB700F62AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A65120D14CB700F62AD5 /* Assets.xcassets */; };
 		4DD9A65520D14CB700F62AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A65320D14CB700F62AD5 /* LaunchScreen.storyboard */; };
-		4DD9A65D20D1500700F62AD5 /* LoapAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A65C20D1500700F62AD5 /* LoapAppVC.swift */; };
 		4DD9A66220D1720900F62AD5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A66120D1720900F62AD5 /* README.md */; };
+		4DD9A66420D1907F00F62AD5 /* CustomerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A66320D1907F00F62AD5 /* CustomerInfoVC.swift */; };
+		4DD9A66620D190A600F62AD5 /* CustomerIdentificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A66520D190A600F62AD5 /* CustomerIdentificationVC.swift */; };
+		4DD9A66820D190C200F62AD5 /* VehicleLoanInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A66720D190C200F62AD5 /* VehicleLoanInfoVC.swift */; };
+		4DD9A68C20D1983900F62AD5 /* LoanApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A68A20D1983900F62AD5 /* LoanApplication.xcdatamodeld */; };
+		4DD9A68F20D19F9800F62AD5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A68E20D19F9800F62AD5 /* DataService.swift */; };
+		4DD9A69120D1A63C00F62AD5 /* LoanApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A69020D1A63C00F62AD5 /* LoanApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +27,13 @@
 		4DD9A65120D14CB700F62AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DD9A65420D14CB700F62AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DD9A65620D14CB700F62AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DD9A65C20D1500700F62AD5 /* LoapAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoapAppVC.swift; sourceTree = "<group>"; };
 		4DD9A66120D1720900F62AD5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4DD9A66320D1907F00F62AD5 /* CustomerInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfoVC.swift; sourceTree = "<group>"; };
+		4DD9A66520D190A600F62AD5 /* CustomerIdentificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerIdentificationVC.swift; sourceTree = "<group>"; };
+		4DD9A66720D190C200F62AD5 /* VehicleLoanInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLoanInfoVC.swift; sourceTree = "<group>"; };
+		4DD9A68B20D1983900F62AD5 /* VehicleLoan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VehicleLoan.xcdatamodel; sourceTree = "<group>"; };
+		4DD9A68E20D19F9800F62AD5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		4DD9A69020D1A63C00F62AD5 /* LoanApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		4DD9A64520D14CB600F62AD5 /* hackday-2018-blockchain-loan-application */ = {
 			isa = PBXGroup;
 			children = (
+				4DD9A68D20D19F8300F62AD5 /* Services */,
 				4DD9A66020D1502500F62AD5 /* Views */,
 				4DD9A65F20D1501F00F62AD5 /* Model */,
 				4DD9A65E20D1501600F62AD5 /* Controllers */,
@@ -65,6 +76,7 @@
 				4DD9A65320D14CB700F62AD5 /* LaunchScreen.storyboard */,
 				4DD9A65620D14CB700F62AD5 /* Info.plist */,
 				4DD9A66120D1720900F62AD5 /* README.md */,
+				4DD9A68A20D1983900F62AD5 /* LoanApplication.xcdatamodeld */,
 			);
 			path = "hackday-2018-blockchain-loan-application";
 			sourceTree = "<group>";
@@ -72,7 +84,9 @@
 		4DD9A65E20D1501600F62AD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4DD9A65C20D1500700F62AD5 /* LoapAppVC.swift */,
+				4DD9A66320D1907F00F62AD5 /* CustomerInfoVC.swift */,
+				4DD9A66520D190A600F62AD5 /* CustomerIdentificationVC.swift */,
+				4DD9A66720D190C200F62AD5 /* VehicleLoanInfoVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -80,6 +94,7 @@
 		4DD9A65F20D1501F00F62AD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4DD9A69020D1A63C00F62AD5 /* LoanApplication.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +104,14 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4DD9A68D20D19F8300F62AD5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4DD9A68E20D19F9800F62AD5 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DD9A65D20D1500700F62AD5 /* LoapAppVC.swift in Sources */,
+				4DD9A66420D1907F00F62AD5 /* CustomerInfoVC.swift in Sources */,
+				4DD9A68C20D1983900F62AD5 /* LoanApplication.xcdatamodeld in Sources */,
+				4DD9A66620D190A600F62AD5 /* CustomerIdentificationVC.swift in Sources */,
+				4DD9A69120D1A63C00F62AD5 /* LoanApplication.swift in Sources */,
+				4DD9A68F20D19F9800F62AD5 /* DataService.swift in Sources */,
 				4DD9A64720D14CB600F62AD5 /* AppDelegate.swift in Sources */,
+				4DD9A66820D190C200F62AD5 /* VehicleLoanInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +390,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4DD9A68A20D1983900F62AD5 /* LoanApplication.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4DD9A68B20D1983900F62AD5 /* VehicleLoan.xcdatamodel */,
+			);
+			currentVersion = 4DD9A68B20D1983900F62AD5 /* VehicleLoan.xcdatamodel */;
+			path = LoanApplication.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4DD9A63B20D14CB600F62AD5 /* Project object */;
 }

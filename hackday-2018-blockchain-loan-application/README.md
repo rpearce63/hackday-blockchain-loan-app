@@ -1,5 +1,5 @@
 # 2018 Hack Day Team
-* TEAM GR
+* TEAM GaRp
 
 # Team Members
 * Gil Abayon (dce5)
