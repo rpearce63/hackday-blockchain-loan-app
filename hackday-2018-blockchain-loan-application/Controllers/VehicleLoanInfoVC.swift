@@ -81,8 +81,9 @@ class VehicleLoanInfoVC: UIViewController {
             loanApplication?.price = self.vehPrice.text
             
             self.saveData()
-            let jsonString = loanApplication?.toJSON()
-            print(jsonString!)
+            
+            DataService.instance.sendData(loanApplication: loanApplication!)
+            DataService.instance.getData()
         }
     }
     
