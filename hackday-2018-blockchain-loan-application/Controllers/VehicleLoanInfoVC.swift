@@ -83,7 +83,7 @@ class VehicleLoanInfoVC: UIViewController {
             self.saveData()
             
             DataService.instance.sendData(loanApplication: loanApplication!)
-            DataService.instance.getData()
+            //DataService.instance.getData()
         }
     }
     

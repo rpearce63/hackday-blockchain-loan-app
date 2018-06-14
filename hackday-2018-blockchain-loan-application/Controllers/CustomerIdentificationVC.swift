@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CustomerIdentificationVC: UIViewController {
+class CustomerIdentificationVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var ssn: UITextField!
@@ -21,10 +21,33 @@ class CustomerIdentificationVC: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var loanApplication : LoanApplication?
+    var activeTextField : UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        createDatePicker(field: dateOfBirth)
+        createDatePicker(field: dlIssuedDate)
+        createDatePicker(field: dlRenewalDate)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.activeTextField = textField
+    }
+    
+    func createDatePicker(field : UITextField) {
+        field.delegate = self
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        field.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(handleDateChange(sender:)), for: .valueChanged)
+    }
+    
+    @objc func handleDateChange(sender: UIDatePicker) {
+        let df = DateFormatter()
+        df.dateFormat = "MM/dd/YYYY"
+        let dateStr = df.string(from: sender.date)
+        self.activeTextField?.text = dateStr
     }
 
     func loadData() {

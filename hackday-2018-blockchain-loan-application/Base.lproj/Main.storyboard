@@ -307,6 +307,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitBtnClicked:" destination="6c6-aT-gNn" eventType="touchUpInside" id="Cod-O4-6tw"/>
+                                    <segue destination="dWF-aN-85l" kind="show" id="cUw-jY-gJM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need estimated car insurance quote when loan is approved?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fli-IP-lcr">
@@ -427,6 +428,117 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sum-3S-hz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4771.0144927536239" y="-238.04347826086959"/>
+        </scene>
+        <!--SummaryVC-->
+        <scene sceneID="tvd-48-8J9">
+            <objects>
+                <viewController id="dWF-aN-85l" customClass="SummaryVC" customModule="hackday_2018_blockchain_loan_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dBY-3H-GOz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Loan Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCA-6G-F5u">
+                                <rect key="frame" x="131.66666666666669" y="80" width="150.66666666666669" height="27.333333333333329"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your loan has been approved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGC-Ko-ahp">
+                                <rect key="frame" x="15.333333333333343" y="157.33333333333334" width="383.33333333333326" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PMY-bS-UMQ">
+                                <rect key="frame" x="8" y="225.66666666666663" width="398" height="114"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YRR-9C-gqR">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="27.333333333333332"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXS-cX-zel">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VL12345678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mh-vF-ZGG">
+                                                <rect key="frame" x="199" y="0.0" width="199" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YNq-Vc-J3i">
+                                        <rect key="frame" x="0.0" y="43.333333333333343" width="398" height="27.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approval Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-Eg-a1z">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06/15/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksH-lM-dvm">
+                                                <rect key="frame" x="199" y="0.0" width="199" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvr-VG-gPv">
+                                        <rect key="frame" x="0.0" y="86.666666666666657" width="398" height="27.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Insurance Quote:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRr-Nx-OXG">
+                                                <rect key="frame" x="0.0" y="0.0" width="323" height="27.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$125" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxs-QE-his">
+                                                <rect key="frame" x="323" y="0.0" width="75" height="27.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="ZUM-8c-KfN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7U-df-dNo">
+                                <rect key="frame" x="145" y="640" width="124.99999999999997" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1252872686" green="0.64158819300000003" blue="0.85911875299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeBtnPressed:" destination="dWF-aN-85l" eventType="touchUpInside" id="gon-4i-gkH"/>
+                                    <action selector="submitBtnClicked:" destination="6c6-aT-gNn" eventType="touchUpInside" id="RsV-k1-HXn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PMY-bS-UMQ" firstAttribute="leading" secondItem="r3h-gJ-qKt" secondAttribute="leading" constant="8" id="2x0-Ak-Xwn"/>
+                            <constraint firstItem="YCA-6G-F5u" firstAttribute="top" secondItem="r3h-gJ-qKt" secondAttribute="top" constant="16" id="8Uv-6r-RgP"/>
+                            <constraint firstItem="yGC-Ko-ahp" firstAttribute="centerX" secondItem="dBY-3H-GOz" secondAttribute="centerX" id="iTz-bO-Jjb"/>
+                            <constraint firstItem="r3h-gJ-qKt" firstAttribute="trailing" secondItem="PMY-bS-UMQ" secondAttribute="trailing" constant="8" id="k6N-Y8-PCe"/>
+                            <constraint firstItem="yGC-Ko-ahp" firstAttribute="top" secondItem="YCA-6G-F5u" secondAttribute="bottom" constant="50" id="lQE-d3-z74"/>
+                            <constraint firstItem="PMY-bS-UMQ" firstAttribute="top" secondItem="yGC-Ko-ahp" secondAttribute="bottom" constant="30" id="r5X-sT-iru"/>
+                            <constraint firstItem="YCA-6G-F5u" firstAttribute="centerX" secondItem="dBY-3H-GOz" secondAttribute="centerX" id="tFu-7m-22M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r3h-gJ-qKt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeF-kr-pLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5488" y="-239"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4VL-PO-H3A">
