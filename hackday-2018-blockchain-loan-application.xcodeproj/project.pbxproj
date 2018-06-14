@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BC4169220D24DD20097B4B7 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4169120D24DD20097B4B7 /* Summary.swift */; };
 		4DD9A64720D14CB600F62AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A64620D14CB600F62AD5 /* AppDelegate.swift */; };
 		4DD9A65020D14CB600F62AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A64E20D14CB600F62AD5 /* Main.storyboard */; };
 		4DD9A65220D14CB700F62AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DD9A65120D14CB700F62AD5 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BC4169120D24DD20097B4B7 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		4DD9A64320D14CB600F62AD5 /* hackday-2018-blockchain-loan-application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hackday-2018-blockchain-loan-application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD9A64620D14CB600F62AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DD9A64F20D14CB600F62AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4DD9A69020D1A63C00F62AD5 /* LoanApplication.swift */,
+				2BC4169120D24DD20097B4B7 /* Summary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DD9A66420D1907F00F62AD5 /* CustomerInfoVC.swift in Sources */,
+				2BC4169220D24DD20097B4B7 /* Summary.swift in Sources */,
 				4DD9A69320D2408000F62AD5 /* SummaryVC.swift in Sources */,
 				4DD9A68C20D1983900F62AD5 /* LoanApplication.xcdatamodeld in Sources */,
 				4DD9A66620D190A600F62AD5 /* CustomerIdentificationVC.swift in Sources */,

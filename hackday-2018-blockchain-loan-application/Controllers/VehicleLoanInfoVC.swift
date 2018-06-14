@@ -20,10 +20,12 @@ class VehicleLoanInfoVC: UIViewController {
     @IBOutlet weak var vehModel: UITextField!
     @IBOutlet weak var vehCondition: UITextField!
     @IBOutlet weak var vehPrice: UITextField!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var loanApplication : LoanApplication?
+    var summary: Summary?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,11 +81,26 @@ class VehicleLoanInfoVC: UIViewController {
             loanApplication?.model = self.vehModel.text
             loanApplication?.condition = self.vehCondition.text
             loanApplication?.price = self.vehPrice.text
-            
-            self.saveData()
-            
-            DataService.instance.sendData(loanApplication: loanApplication!)
             //DataService.instance.getData()
+        }
+        self.saveData()
+        self.spinner.isHidden = false
+        self.spinner.startAnimating()
+        DataService.instance.sendData(loanApplication: loanApplication!, completion: {
+            data, error in
+            self.summary = data
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
+            self.performSegue(withIdentifier: "toSummary", sender: nil)
+            
+        })
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let targetVC = segue.destination as? SummaryVC {
+            targetVC.summary = self.summary
         }
     }
     

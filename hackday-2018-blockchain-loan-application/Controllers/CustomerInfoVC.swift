@@ -32,8 +32,12 @@ class CustomerInfoVC: UIViewController {
         let request : NSFetchRequest<LoanApplication> = LoanApplication.fetchRequest()
         do {
             loanApplication = try context.fetch(request).first
-            populateFields(data: loanApplication!)
-        } catch {
+            if let loanApp = loanApplication {
+                populateFields(data: loanApp)
+            } else {
+                loanApplication = LoanApplication(context: context)
+            }
+            } catch {
             print(error)
         }
     }

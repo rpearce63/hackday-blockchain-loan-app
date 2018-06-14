@@ -17,7 +17,7 @@ import CoreData
     
     
     func getData() {
-        let urlString = "https://jsonplaceholder.typicode.com/posts/1"
+        let urlString = "http://10.0.1.2:9080/BankLoanWorkFlowService/loans"
         guard let url = URL(string: urlString) else { return }
         //print("got url: ", url)
         URLSession.shared.dataTask(with: url) { (data, response, error ) in
@@ -38,24 +38,19 @@ import CoreData
         }.resume()
     }
     
-    func sendData(loanApplication: LoanApplication) {
+    func sendData(loanApplication: LoanApplication, completion: @escaping (Summary?, Error?) -> Void ) {
+        var summary: Summary?
         let jsonLoanApp = loanApplication.toJSON()
-        let loanEndpoint: String = "https://jsonplaceholder.typicode.com/posts"
+        let loanEndpoint: String = "http://10.0.1.2:9080/BankLoanWorkFlowService/loans"
         guard let loanURL = URL(string: loanEndpoint) else {
             print("Error: cannot create URL")
             return
         }
         var loanUrlRequest = URLRequest(url: loanURL)
         loanUrlRequest.httpMethod = "POST"
-        //let newTodo: FakePost = FakePost(userId: 1, id: nil, title: "A Title", body: "A Body")
-        //let jsonTodo: Data
-        //do {
-            //jsonTodo = try JSONEncoder().encode(newTodo)
+        
             loanUrlRequest.httpBody = jsonLoanApp
-//        } catch {
-//            print("Error: cannot create JSON from todo")
-//            return
-//        }
+            loanUrlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let session = URLSession.shared
         
@@ -70,20 +65,24 @@ import CoreData
                 print("Error: did not receive data")
                 return
             }
+            DispatchQueue.main.async() {
             
-            do {
-                print(responseData.debugDescription)
-                let jsonData = try JSONSerialization.jsonObject(with: responseData, options: [.mutableContainers]) as? [String: AnyObject]
-                DispatchQueue.main.async {
-                    print(jsonData!)
+                do {
+                    let jsonData = try JSONSerialization.jsonObject(with: responseData, options: [.mutableContainers]) as? [String: AnyObject]
+                        print(jsonData!)
+                        summary = try JSONDecoder().decode(Summary.self, from: responseData)
+                        print(summary!)
+                } catch  {
+                    print("error parsing response from POST on /todos")
+                    return
                 }
-            } catch  {
-                print("error parsing response from POST on /todos")
-                return
+                completion(summary, error )
             }
         }
         task.resume()
+        
     }
+    
 }
 
 struct FakePost: Codable {
